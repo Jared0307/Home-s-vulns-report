@@ -80,6 +80,14 @@ A continuación se presentan las observaciones sobre los servicios y puertos abi
         Puerto 18181/tcp: Servicio no identificado.
         Puerto 25454/tcp: Desconocido.
         Puerto 36866/tcp: Desconocido.
+        
+## Obtenciòn de CVE para Explotar
+A pesar de mis esfuerzos por encontrar vulnerabilidades explotables en las direcciones identificadas como potencialmente vulnerables, no encontré ninguna vulnerabilidad significativa. Los resultados de mis análisis indican que estas direcciones pueden contar con medidas de seguridad apropiadas, aunque no absolutas.
+
+Esto sugiere que los equipos tienen una configuración inicial sólida y han aplicado parches y actualizaciones de seguridad de manera adecuada. Sin embargo, la ausencia de vulnerabilidades identificadas no garantiza la invulnerabilidad absoluta. Para comprometer estos equipos, un atacante potencial tendría que emplear técnicas de penetración más avanzadas.
+
+![captura_001](https://github.com/Jared0307/Home-s-vulns-report/assets/101056540/cab841b6-ea71-4511-8fa8-2b879c1949d9)
+
 
 ## Registro de Actividades
 
