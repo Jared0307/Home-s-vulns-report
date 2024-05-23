@@ -1,0 +1,34 @@
+# Nmap 7.95 scan initiated Thu May 23 02:22:20 2024 as: nmap -sCV -Pn -oN vuln3.nmap -p80,135,139,445,902,912,5040,5357,49668 192.168.100.16
+Nmap scan report for 192.168.100.16
+Host is up (0.00052s latency).
+
+PORT      STATE SERVICE         VERSION
+80/tcp    open  http            Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: IIS Windows
+135/tcp   open  msrpc           Microsoft Windows RPC
+139/tcp   open  netbios-ssn     Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+902/tcp   open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+912/tcp   open  vmware-auth     VMware Authentication Daemon 1.0 (Uses VNC, SOAP)
+5040/tcp  open  unknown
+5357/tcp  open  http            Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+49668/tcp open  msrpc           Microsoft Windows RPC
+MAC Address: E0:0A:F6:A9:CC:D1 (Liteon Technology)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: JARED, NetBIOS user: <unknown>, NetBIOS MAC: e0:0a:f6:a9:cc:d1 (Liteon Technology)
+| smb2-time: 
+|   date: 2024-05-23T02:24:57
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May 23 02:25:38 2024 -- 1 IP address (1 host up) scanned in 198.51 seconds

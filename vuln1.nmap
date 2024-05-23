@@ -1,0 +1,53 @@
+# Nmap 7.95 scan initiated Thu May 23 02:21:30 2024 as: nmap -sCV -Pn -oN vuln1.nmap -p80,8888,9431,56789,56790 192.168.100.2
+Nmap scan report for 192.168.100.2
+Host is up (0.0079s latency).
+
+PORT      STATE SERVICE    VERSION
+80/tcp    open  http?
+8888/tcp  open  soap       gSOAP 2.7
+|_http-server-header: gSOAP/2.7
+|_http-title: Site doesn't have a title.
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Digest opaque=31c03a00 nonce=664ea842ca603c0287ba qop=auth,auth-int realm=Sagemcom TR-069
+9431/tcp  open  unknown
+| fingerprint-strings: 
+|   GenericLines, Help, JavaRMI, NULL: 
+|     34:DB:9C:18:36:BD
+|     </usr/sbin/ismd -f /etc/ismd.conf -b 34:DB:9C:18:36:BD -n
+|     7989
+|_    6b8b45671f3534:DB:9C:18:36:BD00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+56789/tcp open  tcpwrapped
+56790/tcp open  tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9431-TCP:V=7.95%I=7%D=5/23%Time=664EA831%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,128,"\0\0\0\0\0\0\x01\x20\0\0\0\0\0\0\0\x1434:DB:9C:18:36:BD\0\0\0\0
+SF:\0\0\x01\0\0\0</usr/sbin/ismd\x20-f\x20/etc/ismd\.conf\x20-b\x2034:DB:9
+SF:C:18:36:BD\x20-n\0\0\0\0\0\0\0\x02\0\0\0\x087989\0\0\0\0\0\0\0\x03\0\0\
+SF:0\x04\0\0\0\x02\0\0\0\x04\0\0\0\x04\0\0\0\x01\0\0\0\x05\0\0\0\x04\0\0\0
+SF:\x01\0\0\0,\0\0\0\x846b8b45671f3534:DB:9C:18:36:BD000000000000000000000
+SF:00000000000000000000000000000000000000000000000000000000000000000000000
+SF:000000\0\0\0\0\0")%r(GenericLines,128,"\0\0\0\0\0\0\x01\x20\0\0\0\0\0\0
+SF:\0\x1434:DB:9C:18:36:BD\0\0\0\0\0\0\x01\0\0\0</usr/sbin/ismd\x20-f\x20/
+SF:etc/ismd\.conf\x20-b\x2034:DB:9C:18:36:BD\x20-n\0\0\0\0\0\0\0\x02\0\0\0
+SF:\x087989\0\0\0\0\0\0\0\x03\0\0\0\x04\0\0\0\x02\0\0\0\x04\0\0\0\x04\0\0\
+SF:0\x01\0\0\0\x05\0\0\0\x04\0\0\0\x01\0\0\0,\0\0\0\x846b8b45671f3534:DB:9
+SF:C:18:36:BD0000000000000000000000000000000000000000000000000000000000000
+SF:0000000000000000000000000000000000000\0\0\0\0\0")%r(Help,128,"\0\0\0\0\
+SF:0\0\x01\x20\0\0\0\0\0\0\0\x1434:DB:9C:18:36:BD\0\0\0\0\0\0\x01\0\0\0</u
+SF:sr/sbin/ismd\x20-f\x20/etc/ismd\.conf\x20-b\x2034:DB:9C:18:36:BD\x20-n\
+SF:0\0\0\0\0\0\0\x02\0\0\0\x087989\0\0\0\0\0\0\0\x03\0\0\0\x04\0\0\0\x02\0
+SF:\0\0\x04\0\0\0\x04\0\0\0\x01\0\0\0\x05\0\0\0\x04\0\0\0\x01\0\0\0,\0\0\0
+SF:\x846b8b45671f3534:DB:9C:18:36:BD00000000000000000000000000000000000000
+SF:000000000000000000000000000000000000000000000000000000000000\0\0\0\0\0"
+SF:)%r(JavaRMI,128,"\0\0\0\0\0\0\x01\x20\0\0\0\0\0\0\0\x1434:DB:9C:18:36:B
+SF:D\0\0\0\0\0\0\x01\0\0\0</usr/sbin/ismd\x20-f\x20/etc/ismd\.conf\x20-b\x
+SF:2034:DB:9C:18:36:BD\x20-n\0\0\0\0\0\0\0\x02\0\0\0\x087989\0\0\0\0\0\0\0
+SF:\x03\0\0\0\x04\0\0\0\x02\0\0\0\x04\0\0\0\x04\0\0\0\x01\0\0\0\x05\0\0\0\
+SF:x04\0\0\0\x01\0\0\0,\0\0\0\x846b8b45671f3534:DB:9C:18:36:BD000000000000
+SF:00000000000000000000000000000000000000000000000000000000000000000000000
+SF:000000000000000\0\0\0\0\0");
+MAC Address: 34:DB:9C:18:36:BD (Sagemcom Broadband SAS)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May 23 02:22:02 2024 -- 1 IP address (1 host up) scanned in 31.59 seconds

@@ -1,0 +1,341 @@
+# Nmap 7.95 scan initiated Thu May 23 02:25:45 2024 as: nmap -sCV -Pn -oN vuln4.nmap -p1313,1339,1347,1357,1389,1897,1901,2032,3000,3001,7000,7250,8183,18181,25454,36866 192.168.100.23
+Nmap scan report for 192.168.100.23
+Host is up (0.0043s latency).
+
+PORT      STATE SERVICE    VERSION
+1313/tcp  open  upnp
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Thu, 23 May 2024 02:26:09 GMT
+|     Server: WebOS/1.5 UPnP/1.0 webOSTV/1.0
+|     Content-Length: 132
+|     Content-Type: text/html
+|     Connection: close
+|     Application-URL: http://192.168.100.23:36866/apps
+|     <html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL was not found on this server.</p></html>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 23 May 2024 02:25:54 GMT
+|     Server: WebOS/1.5 UPnP/1.0 webOSTV/1.0
+|     Content-Length: 1225
+|     Content-Type: text/xml; charset="utf-8"
+|     Connection: close
+|     Application-URL: http://192.168.100.23:36866/apps
+|     <?xml version="1.0" encoding="UTF-8"?>
+|     <root xmlns="urn:schemas-upnp-org:device-1-0" xmlns:dlna="urn:schemas-dlna-org:device-1-0">
+|     <specVersion>
+|     <major>1</major>
+|     <minor>0</minor>
+|     </specVersion>
+|     <device>
+|     <deviceType>urn:dial-multiscreen-org:service:dial:1</deviceType>
+|     <friendlyName>[LG] webOS TV LQ630BPSA</friendlyName>
+|     <manufacturer>LG</manufacturer>
+|     <manufacturerURL>http://www.lge.com</manufacturerURL>
+|     <modelDescription></modelDescription>
+|     <modelName>32LQ630BPSA</modelName>
+|     <modelURL>http://www.lge.com</modelURL>
+|     <modelNumber>WEBOS</modelNumber>
+|     <serialNumber></serialNumber>
+|     <UDN>uuid:04dc822d
+|   HTTPOptions: 
+|     HTTP/1.1 405 Bad Request
+|     Date: Thu, 23 May 2024 02:25:54 GMT
+|     Server: WebOS/1.5 UPnP/1.0 webOSTV/1.0
+|     Content-Length: 0
+|     Connection: close
+|     Application-URL: http://192.168.100.23:36866/apps
+|   RTSPRequest: 
+|     HTTP/1.1 405 Bad Request
+|     Date: Thu, 23 May 2024 02:25:54 GMT
+|     Server: WebOS/1.5 UPnP/1.0 webOSTV/1.0
+|     Content-Length: 0
+|_    Application-URL: http://192.168.100.23:36866/apps
+1339/tcp  open  upnp       LG WebOS TV upnpd (model: LQ630BPSA; WebOS 0.9; UPnP 1.0; DLNADOC 1.50)
+1347/tcp  open  upnp
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Thu, 23 May 2024 02:26:09 GMT
+|     Content-Length: 132
+|     Content-Type: text/html
+|     Connection: close
+|     Server: 
+|     <html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL was not found on this server.</p></html>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 23 May 2024 02:25:54 GMT
+|     Content-Length: 1308
+|     Content-Type: text/xml; charset="utf-8"
+|     Connection: close
+|     Server: 
+|     <?xml version="1.0" encoding="UTF-8"?>
+|     <root xmlns="urn:schemas-upnp-org:device-1-0" xmlns:dlna="urn:schemas-dlna-org:device-1-0">
+|     <specVersion>
+|     <major>1</major>
+|     <minor>0</minor>
+|     </specVersion>
+|     <device>
+|     <deviceType>urn:lge-com:device:room-connect:1</deviceType>
+|     <friendlyName>[LG] webOS TV LQ630BPSA</friendlyName>
+|     <manufacturer>LG Electronics</manufacturer>
+|     <manufacturerURL>http://www.lge.com</manufacturerURL>
+|     <modelDescription>7047c6a5-d429-2f63-6e4c-9f201a9da56d</modelDescription>
+|     <modelName>LG smart TV</modelName>
+|     <modelURL>http://www.lge.com</modelURL>
+|     <modelNumber>7.4.0</modelNumber>
+|     <serialNumber></serialNumber>
+|     <UDN>uuid:5008def2-fb80-4abf-8d6e-3b5c5149b58b</UDN>
+|   HTTPOptions: 
+|     HTTP/1.1 405 Bad Request
+|     Date: Thu, 23 May 2024 02:25:54 GMT
+|     Content-Length: 0
+|     Connection: close
+|     Server:
+|   RTSPRequest: 
+|     HTTP/1.1 405 Bad Request
+|     Date: Thu, 23 May 2024 02:25:54 GMT
+|     Content-Length: 0
+|     Server:
+|   SIPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 132
+|     Content-Type: text/html
+|     Server: 
+|_    <html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL was not found on this server.</p></html>
+1357/tcp  open  upnp       LG WebOS upnpd (WebOS 4.0.0; UPnP 1.0)
+1389/tcp  open  upnp       LG WebOS upnpd (WebOS 4.1.0; UPnP 1.0)
+1897/tcp  open  upnp       Platinum unpnd 1.0.4.9 (arch: i686; UPnP 1.0; DLNADOC 1.50)
+1901/tcp  open  upnp       Platinum unpnd 1.0.4.9 (arch: i686; UPnP 1.0; DLNADOC 1.50)
+2032/tcp  open  upnp       Platinum unpnd 1.0.4.9 (arch: i686; UPnP 1.0; DLNADOC 1.50)
+3000/tcp  open  tcpwrapped
+3001/tcp  open  ssl/http   LG smart TV http service
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+|_http-title: Site doesn't have a title.
+| ssl-cert: Subject: commonName=LGE TV SSG/organizationName=LG Electronics Inc./stateOrProvinceName=Seoul/countryName=KR
+| Not valid before: 2018-03-12T01:49:52
+|_Not valid after:  2034-08-15T01:49:52
+7000/tcp  open  rtsp       AirTunes rtspd 377.40.00
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+|_irc-info: Unable to open connection
+7250/tcp  open  unknown
+8183/tcp  open  proremote?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.0 403 Forbidden
+|     content-type: text/html
+|     content-length: 173
+|_    <html><head><meta charset=utf-8 http-equiv="Content-Language" content="en"/><link rel="stylesheet" type="text/css" href="/error.css"/></head><body><h1>403</h1></body></html>
+18181/tcp open  opsec-cvp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, X11Probe, afp, ms-sql-s, oracle-tns: 
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+25454/tcp open  unknown
+| fingerprint-strings: 
+|   FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, RTSPRequest, SIPOptions: 
+|     HTTP/1.1 500
+|     Content-Length: 38
+|_    request line in HTTP request header
+36866/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Access-Control-Allow-Origin: 
+|     Date: Thu, 23 May 2024 02:26:01 GMT
+|     Connection: close
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Access-Control-Allow-Origin: 
+|     Date: Thu, 23 May 2024 02:25:55 GMT
+|_    Connection: close
+6 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1313-TCP:V=7.95%I=7%D=5/23%Time=664EA934%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,5AE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2023\x20May\x202
+SF:024\x2002:25:54\x20GMT\r\nServer:\x20WebOS/1\.5\x20UPnP/1\.0\x20webOSTV
+SF:/1\.0\r\nContent-Length:\x201225\r\nContent-Type:\x20text/xml;\x20chars
+SF:et=\"utf-8\"\r\nConnection:\x20close\r\nApplication-URL:\x20http://192\
+SF:.168\.100\.23:36866/apps\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=
+SF:\"UTF-8\"\?>\r\n<root\x20xmlns=\"urn:schemas-upnp-org:device-1-0\"\x20x
+SF:mlns:dlna=\"urn:schemas-dlna-org:device-1-0\">\r\n\x20\x20<specVersion>
+SF:\r\n\x20\x20\x20\x20<major>1</major>\r\n\x20\x20\x20\x20<minor>0</minor
+SF:>\r\n\x20\x20</specVersion>\r\n\x20\x20<device>\r\n\x20\x20\x20\x20<dev
+SF:iceType>urn:dial-multiscreen-org:service:dial:1</deviceType>\r\n\x20\x2
+SF:0\x20\x20<friendlyName>\[LG\]\x20webOS\x20TV\x20LQ630BPSA</friendlyName
+SF:>\r\n\x20\x20\x20\x20<manufacturer>LG</manufacturer>\r\n\x20\x20\x20\x2
+SF:0<manufacturerURL>http://www\.lge\.com</manufacturerURL>\r\n\x20\x20\x2
+SF:0\x20<modelDescription></modelDescription>\r\n\x20\x20\x20\x20<modelNam
+SF:e>32LQ630BPSA</modelName>\r\n\x20\x20\x20\x20<modelURL>http://www\.lge\
+SF:.com</modelURL>\r\n\x20\x20\x20\x20<modelNumber>WEBOS</modelNumber>\r\n
+SF:\x20\x20\x20\x20<serialNumber></serialNumber>\r\n\x20\x20\x20\x20<UDN>u
+SF:uid:04dc822d")%r(HTTPOptions,C2,"HTTP/1\.1\x20405\x20Bad\x20Request\r\n
+SF:Date:\x20Thu,\x2023\x20May\x202024\x2002:25:54\x20GMT\r\nServer:\x20Web
+SF:OS/1\.5\x20UPnP/1\.0\x20webOSTV/1\.0\r\nContent-Length:\x200\r\nConnect
+SF:ion:\x20close\r\nApplication-URL:\x20http://192\.168\.100\.23:36866/app
+SF:s\r\n\r\n")%r(RTSPRequest,AF,"HTTP/1\.1\x20405\x20Bad\x20Request\r\nDat
+SF:e:\x20Thu,\x2023\x20May\x202024\x2002:25:54\x20GMT\r\nServer:\x20WebOS/
+SF:1\.5\x20UPnP/1\.0\x20webOSTV/1\.0\r\nContent-Length:\x200\r\nApplicatio
+SF:n-URL:\x20http://192\.168\.100\.23:36866/apps\r\n\r\n")%r(FourOhFourReq
+SF:uest,15F,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Thu,\x2023\x20Ma
+SF:y\x202024\x2002:26:09\x20GMT\r\nServer:\x20WebOS/1\.5\x20UPnP/1\.0\x20w
+SF:ebOSTV/1\.0\r\nContent-Length:\x20132\r\nContent-Type:\x20text/html\r\n
+SF:Connection:\x20close\r\nApplication-URL:\x20http://192\.168\.100\.23:36
+SF:866/apps\r\n\r\n<html><head><title>404\x20Not\x20Found</title></head><b
+SF:ody><h1>Not\x20Found</h1><p>The\x20requested\x20URL\x20was\x20not\x20fo
+SF:und\x20on\x20this\x20server\.</p></html>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1347-TCP:V=7.95%I=7%D=5/23%Time=664EA934%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,5B0,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2023\x20May\x202
+SF:024\x2002:25:54\x20GMT\r\nContent-Length:\x201308\r\nContent-Type:\x20t
+SF:ext/xml;\x20charset=\"utf-8\"\r\nConnection:\x20close\r\nServer:\x20\r\
+SF:n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"UTF-8\"\?>\r\n<root\x20xm
+SF:lns=\"urn:schemas-upnp-org:device-1-0\"\x20xmlns:dlna=\"urn:schemas-dln
+SF:a-org:device-1-0\">\r\n\x20\x20<specVersion>\r\n\x20\x20\x20\x20<major>
+SF:1</major>\r\n\x20\x20\x20\x20<minor>0</minor>\r\n\x20\x20</specVersion>
+SF:\r\n\x20\x20<device>\r\n\x20\x20\x20\x20<deviceType>urn:lge-com:device:
+SF:room-connect:1</deviceType>\r\n\x20\x20\x20\x20<friendlyName>\[LG\]\x20
+SF:webOS\x20TV\x20LQ630BPSA</friendlyName>\r\n\x20\x20\x20\x20<manufacture
+SF:r>LG\x20Electronics</manufacturer>\r\n\x20\x20\x20\x20<manufacturerURL>
+SF:http://www\.lge\.com</manufacturerURL>\r\n\x20\x20\x20\x20<modelDescrip
+SF:tion>7047c6a5-d429-2f63-6e4c-9f201a9da56d</modelDescription>\r\n\x20\x2
+SF:0\x20\x20<modelName>LG\x20smart\x20TV</modelName>\r\n\x20\x20\x20\x20<m
+SF:odelURL>http://www\.lge\.com</modelURL>\r\n\x20\x20\x20\x20<modelNumber
+SF:>7\.4\.0</modelNumber>\r\n\x20\x20\x20\x20<serialNumber></serialNumber>
+SF:\r\n\x20\x20\x20\x20<UDN>uuid:5008def2-fb80-4abf-8d6e-3b5c5149b58b</UDN
+SF:>\r\n\x20\x20\x20")%r(HTTPOptions,71,"HTTP/1\.1\x20405\x20Bad\x20Reques
+SF:t\r\nDate:\x20Thu,\x2023\x20May\x202024\x2002:25:54\x20GMT\r\nContent-L
+SF:ength:\x200\r\nConnection:\x20close\r\nServer:\x20\r\n\r\n")%r(RTSPRequ
+SF:est,5E,"HTTP/1\.1\x20405\x20Bad\x20Request\r\nDate:\x20Thu,\x2023\x20Ma
+SF:y\x202024\x2002:25:54\x20GMT\r\nContent-Length:\x200\r\nServer:\x20\r\n
+SF:\r\n")%r(FourOhFourRequest,10E,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDat
+SF:e:\x20Thu,\x2023\x20May\x202024\x2002:26:09\x20GMT\r\nContent-Length:\x
+SF:20132\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nServer:\
+SF:x20\r\n\r\n<html><head><title>404\x20Not\x20Found</title></head><body><
+SF:h1>Not\x20Found</h1><p>The\x20requested\x20URL\x20was\x20not\x20found\x
+SF:20on\x20this\x20server\.</p></html>")%r(SIPOptions,D6,"HTTP/1\.1\x20404
+SF:\x20Not\x20Found\r\nContent-Length:\x20132\r\nContent-Type:\x20text/htm
+SF:l\r\nServer:\x20\r\n\r\n<html><head><title>404\x20Not\x20Found</title><
+SF:/head><body><h1>Not\x20Found</h1><p>The\x20requested\x20URL\x20was\x20n
+SF:ot\x20found\x20on\x20this\x20server\.</p></html>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8183-TCP:V=7.95%I=7%D=5/23%Time=664EA93F%P=x86_64-pc-linux-gnu%r(RP
+SF:CCheck,F5,"HTTP/1\.0\x20403\x20Forbidden\r\ncontent-type:\x20text/html\
+SF:r\ncontent-length:\x20173\r\n\r\n<html><head><meta\x20charset=utf-8\x20
+SF:http-equiv=\"Content-Language\"\x20content=\"en\"/><link\x20rel=\"style
+SF:sheet\"\x20type=\"text/css\"\x20href=\"/error\.css\"/></head><body><h1>
+SF:403</h1></body></html>")%r(DNSVersionBindReqTCP,F5,"HTTP/1\.0\x20403\x2
+SF:0Forbidden\r\ncontent-type:\x20text/html\r\ncontent-length:\x20173\r\n\
+SF:r\n<html><head><meta\x20charset=utf-8\x20http-equiv=\"Content-Language\
+SF:"\x20content=\"en\"/><link\x20rel=\"stylesheet\"\x20type=\"text/css\"\x
+SF:20href=\"/error\.css\"/></head><body><h1>403</h1></body></html>")%r(DNS
+SF:StatusRequestTCP,F5,"HTTP/1\.0\x20403\x20Forbidden\r\ncontent-type:\x20
+SF:text/html\r\ncontent-length:\x20173\r\n\r\n<html><head><meta\x20charset
+SF:=utf-8\x20http-equiv=\"Content-Language\"\x20content=\"en\"/><link\x20r
+SF:el=\"stylesheet\"\x20type=\"text/css\"\x20href=\"/error\.css\"/></head>
+SF:<body><h1>403</h1></body></html>")%r(Help,F5,"HTTP/1\.0\x20403\x20Forbi
+SF:dden\r\ncontent-type:\x20text/html\r\ncontent-length:\x20173\r\n\r\n<ht
+SF:ml><head><meta\x20charset=utf-8\x20http-equiv=\"Content-Language\"\x20c
+SF:ontent=\"en\"/><link\x20rel=\"stylesheet\"\x20type=\"text/css\"\x20href
+SF:=\"/error\.css\"/></head><body><h1>403</h1></body></html>")%r(SSLSessio
+SF:nReq,F5,"HTTP/1\.0\x20403\x20Forbidden\r\ncontent-type:\x20text/html\r\
+SF:ncontent-length:\x20173\r\n\r\n<html><head><meta\x20charset=utf-8\x20ht
+SF:tp-equiv=\"Content-Language\"\x20content=\"en\"/><link\x20rel=\"stylesh
+SF:eet\"\x20type=\"text/css\"\x20href=\"/error\.css\"/></head><body><h1>40
+SF:3</h1></body></html>")%r(TerminalServerCookie,F5,"HTTP/1\.0\x20403\x20F
+SF:orbidden\r\ncontent-type:\x20text/html\r\ncontent-length:\x20173\r\n\r\
+SF:n<html><head><meta\x20charset=utf-8\x20http-equiv=\"Content-Language\"\
+SF:x20content=\"en\"/><link\x20rel=\"stylesheet\"\x20type=\"text/css\"\x20
+SF:href=\"/error\.css\"/></head><body><h1>403</h1></body></html>")%r(TLSSe
+SF:ssionReq,F5,"HTTP/1\.0\x20403\x20Forbidden\r\ncontent-type:\x20text/htm
+SF:l\r\ncontent-length:\x20173\r\n\r\n<html><head><meta\x20charset=utf-8\x
+SF:20http-equiv=\"Content-Language\"\x20content=\"en\"/><link\x20rel=\"sty
+SF:lesheet\"\x20type=\"text/css\"\x20href=\"/error\.css\"/></head><body><h
+SF:1>403</h1></body></html>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port18181-TCP:V=7.95%I=7%D=5/23%Time=664EA93F%P=x86_64-pc-linux-gnu%r(R
+SF:TSPRequest,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20clo
+SF:se\r\n\r\n")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConne
+SF:ction:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,2F,"HTTP/1\.1\x20400\x
+SF:20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(DNSStatusRequestTC
+SF:P,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\
+SF:n")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20clo
+SF:se\r\n\r\n")%r(SSLSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n
+SF:Connection:\x20close\r\n\r\n")%r(TerminalServerCookie,2F,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(TLSSessionReq
+SF:,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n
+SF:")%r(Kerberos,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20
+SF:close\r\n\r\n")%r(SMBProgNeg,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n
+SF:Connection:\x20close\r\n\r\n")%r(X11Probe,2F,"HTTP/1\.1\x20400\x20Bad\x
+SF:20Request\r\nConnection:\x20close\r\n\r\n")%r(LPDString,2F,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(LDAPSearchR
+SF:eq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r
+SF:\n")%r(LDAPBindReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection
+SF::\x20close\r\n\r\n")%r(SIPOptions,2F,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\nConnection:\x20close\r\n\r\n")%r(LANDesk-RC,2F,"HTTP/1\.1\x20400\x
+SF:20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(TerminalServer,2F,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r
+SF:(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n
+SF:\r\n")%r(NotesRPC,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:
+SF:\x20close\r\n\r\n")%r(JavaRMI,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nConnection:\x20close\r\n\r\n")%r(WMSRequest,2F,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20Request\r\nConnection:\x20close\r\n\r\n")%r(oracle-tns,2F,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(ms-sql-
+SF:s,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\
+SF:n")%r(afp,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20clos
+SF:e\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port25454-TCP:V=7.95%I=7%D=5/23%Time=664EA930%P=x86_64-pc-linux-gnu%r(G
+SF:enericLines,4A,"HTTP/1\.1\x20500\r\nContent-Length:\x2038\r\n\r\nNo\x20
+SF:request\x20line\x20in\x20HTTP\x20request\x20header")%r(GetRequest,4A,"H
+SF:TTP/1\.1\x20500\r\nContent-Length:\x2038\r\n\r\nNo\x20request\x20line\x
+SF:20in\x20HTTP\x20request\x20header")%r(HTTPOptions,4A,"HTTP/1\.1\x20500\
+SF:r\nContent-Length:\x2038\r\n\r\nNo\x20request\x20line\x20in\x20HTTP\x20
+SF:request\x20header")%r(RTSPRequest,4A,"HTTP/1\.1\x20500\r\nContent-Lengt
+SF:h:\x2038\r\n\r\nNo\x20request\x20line\x20in\x20HTTP\x20request\x20heade
+SF:r")%r(FourOhFourRequest,4A,"HTTP/1\.1\x20500\r\nContent-Length:\x2038\r
+SF:\n\r\nNo\x20request\x20line\x20in\x20HTTP\x20request\x20header")%r(SIPO
+SF:ptions,4A,"HTTP/1\.1\x20500\r\nContent-Length:\x2038\r\n\r\nNo\x20reque
+SF:st\x20line\x20in\x20HTTP\x20request\x20header");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port36866-TCP:V=7.95%I=7%D=5/23%Time=664EA935%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,71,"HTTP/1\.1\x20404\x20Not\x20Found\r\nAccess-Control-Allow-
+SF:Origin:\x20\r\nDate:\x20Thu,\x2023\x20May\x202024\x2002:25:55\x20GMT\r\
+SF:nConnection:\x20close\r\n\r\n")%r(RTSPRequest,2F,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(RPCCheck,2F,"HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(DNSVersi
+SF:onBindReqTCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20c
+SF:lose\r\n\r\n")%r(DNSStatusRequestTCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Req
+SF:uest\r\nConnection:\x20close\r\n\r\n")%r(Help,2F,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(SSLSessionReq,2F,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(Ter
+SF:minalServerCookie,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:
+SF:\x20close\r\n\r\n")%r(TLSSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nConnection:\x20close\r\n\r\n")%r(Kerberos,2F,"HTTP/1\.1\x20400\x
+SF:20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(SMBProgNeg,2F,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(X11
+SF:Probe,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\
+SF:n\r\n")%r(FourOhFourRequest,71,"HTTP/1\.1\x20404\x20Not\x20Found\r\nAcc
+SF:ess-Control-Allow-Origin:\x20\r\nDate:\x20Thu,\x2023\x20May\x202024\x20
+SF:02:26:01\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(LPDString,2F,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(LDAPS
+SF:earchReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close
+SF:\r\n\r\n")%r(LDAPBindReq,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConn
+SF:ection:\x20close\r\n\r\n")%r(SIPOptions,2F,"HTTP/1\.1\x20400\x20Bad\x20
+SF:Request\r\nConnection:\x20close\r\n\r\n")%r(LANDesk-RC,2F,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(TerminalServ
+SF:er,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r
+SF:\n")%r(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20clo
+SF:se\r\n\r\n")%r(NotesRPC,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConne
+SF:ction:\x20close\r\n\r\n");
+MAC Address: 74:E6:B8:F4:24:02 (LG Electronics)
+Service Info: OS: Linux; Device: media device; CPE: cpe:/h:lg:lq630bpsa, cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May 23 02:28:14 2024 -- 1 IP address (1 host up) scanned in 148.73 seconds
