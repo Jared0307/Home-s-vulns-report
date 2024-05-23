@@ -1,0 +1,90 @@
+# Nmap 7.95 scan initiated Thu May 23 01:50:00 2024 as: nmap -sS -p- --min-rate 5000 -Pn -oN puertos.nmap 192.168.100.1 192.168.100.2 192.168.100.8 192.168.100.9 192.168.100.15 192.168.100.16 192.168.100.23 192.168.100.26
+Warning: 192.168.100.8 giving up on port because retransmission cap hit (10).
+Nmap scan report for 192.168.100.1
+Host is up (0.0074s latency).
+Not shown: 65526 closed tcp ports (reset)
+PORT      STATE    SERVICE
+22/tcp    filtered ssh
+23/tcp    open     telnet
+53/tcp    open     domain
+80/tcp    open     http
+8022/tcp  filtered oa-system
+37443/tcp open     unknown
+37444/tcp open     unknown
+49652/tcp open     unknown
+49653/tcp open     unknown
+MAC Address: 60:FA:9D:C9:2A:14 (Huawei Technologies)
+
+Nmap scan report for 192.168.100.2
+Host is up (0.0041s latency).
+Not shown: 65530 closed tcp ports (reset)
+PORT      STATE SERVICE
+80/tcp    open  http
+8888/tcp  open  sun-answerbook
+9431/tcp  open  unknown
+56789/tcp open  unknown
+56790/tcp open  unknown
+MAC Address: 34:DB:9C:18:36:BD (Sagemcom Broadband SAS)
+
+Nmap scan report for 192.168.100.8
+Host is up (0.024s latency).
+All 65535 scanned ports on 192.168.100.8 are in ignored states.
+Not shown: 56698 filtered tcp ports (no-response), 8837 closed tcp ports (reset)
+MAC Address: 22:C4:10:0B:FA:D3 (Unknown)
+
+Nmap scan report for 192.168.100.15
+Host is up (0.023s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT      STATE SERVICE
+45093/tcp open  unknown
+MAC Address: 7A:4A:20:CB:A2:45 (Unknown)
+
+Nmap scan report for 192.168.100.16
+Host is up (0.00044s latency).
+Not shown: 65526 filtered tcp ports (no-response)
+PORT      STATE SERVICE
+80/tcp    open  http
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+902/tcp   open  iss-realsecure
+912/tcp   open  apex-mesh
+5040/tcp  open  unknown
+5357/tcp  open  wsdapi
+49668/tcp open  unknown
+MAC Address: E0:0A:F6:A9:CC:D1 (Liteon Technology)
+
+Nmap scan report for 192.168.100.23
+Host is up (0.0059s latency).
+Not shown: 65519 closed tcp ports (reset)
+PORT      STATE SERVICE
+1313/tcp  open  bmc_patroldb
+1339/tcp  open  kjtsiteserver
+1347/tcp  open  bbn-mmc
+1357/tcp  open  pegboard
+1389/tcp  open  iclpv-dm
+1897/tcp  open  metaagent
+1901/tcp  open  fjicl-tep-a
+2032/tcp  open  blackboard
+3000/tcp  open  ppp
+3001/tcp  open  nessus
+7000/tcp  open  afs3-fileserver
+7250/tcp  open  unknown
+8183/tcp  open  proremote
+18181/tcp open  opsec-cvp
+25454/tcp open  unknown
+36866/tcp open  unknown
+MAC Address: 74:E6:B8:F4:24:02 (LG Electronics)
+
+Nmap scan report for 192.168.100.26
+Host is up (0.0088s latency).
+All 65535 scanned ports on 192.168.100.26 are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+MAC Address: 10:3C:59:56:18:5F (zte)
+
+Nmap scan report for 192.168.100.9
+Host is up (0.0000060s latency).
+All 65535 scanned ports on 192.168.100.9 are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+
+# Nmap done at Thu May 23 01:53:58 2024 -- 8 IP addresses (8 hosts up) scanned in 238.25 seconds
