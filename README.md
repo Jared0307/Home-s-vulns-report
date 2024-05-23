@@ -1,1 +1,0 @@
-# Home-s-vulns-report
