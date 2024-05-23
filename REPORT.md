@@ -42,18 +42,18 @@ A continuación se presentan las observaciones sobre los servicios y puertos abi
     
 ## Escaneo Dedicado a Puertos Abiertos
 
-    192.168.100.2:
+192.168.100.2:
     
         Puerto 80/tcp: El servicio no está identificado.
         Puerto 8888/tcp: Se detecta el servicio gSOAP 2.7. Parece que hay una página web sin título y sin autorización de acceso.
         Puerto 9431/tcp: Se detecta un servicio desconocido. La cadena de huellas puede indicar un servidor web en un enrutador Sagemcom.
         Puertos 56789/tcp y 56790/tcp: Están envueltos en TCP, lo que podría significar que hay servicios ejecutándose en esos puertos, pero no se puede identificar qué servicios son.
 
-    192.168.100.15:
+192.168.100.15:
     
         Puerto 45093/tcp: Está filtrado, lo que indica que el puerto está bloqueado o no hay respuesta del servicio.
 
-    192.168.100.16:
+192.168.100.16:
     
         Puerto 80/tcp: Ejecuta Microsoft IIS httpd 10.0. El método HTTP TRACE está habilitado, lo que puede ser una vulnerabilidad si no es necesario.
         Puerto 135/tcp: Ejecuta Microsoft Windows RPC.
@@ -64,7 +64,7 @@ A continuación se presentan las observaciones sobre los servicios y puertos abi
         Puerto 5357/tcp: Ejecuta Microsoft HTTPAPI httpd 2.0.
         Puerto 49668/tcp: Ejecuta Microsoft Windows RPC.
 
-    192.168.100.23:
+192.168.100.23:
     
         Puerto 1313/tcp: Ejecuta UPnP y podría estar asociado con un televisor webOS.
         Puerto 1339/tcp: También ejecuta UPnP y está asociado con un televisor LG WebOS.
