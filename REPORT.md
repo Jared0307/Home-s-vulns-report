@@ -39,3 +39,7 @@ A continuación se presentan las observaciones sobre los servicios y puertos abi
 
     Servicios abiertos: Una amplia variedad de puertos abiertos, incluyendo algunos comunes y otros más oscuros como fjicl-tep-a (puerto 1901/tcp) y proremote (puerto 8183/tcp).
     Sistema operativo: LG Electronics
+
+## Registro de Actividades
+
+Este repositorio sirve como un registro completo de todas las actividades de escaneo realizadas en nuestra red. Desde la identificación de dispositivos hasta el análisis de puertos y servicios abiertos, cada detalle está documentado de manera concisa y clara para su revisión y referencia.
